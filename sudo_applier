@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "adding defaults keeps into visudo..."
+location="/etc/sudoers.tmp"
+echo "editing $location"
+echo "Defaults env_keep += \"http_proxy https_proxy ftp_proxy" | EDITOR='tee -a' visudo
